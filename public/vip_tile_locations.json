@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Hollywood Sign",
+    "type": "landmark",
+    "lat": 34.1341,
+    "lng": -118.3215,
+    "tile_size_deg": 0.2,
+    "importance": "high"
+  },
+  {
+    "name": "Wembley Stadium",
+    "type": "stadium",
+    "lat": 51.556,
+    "lng": -0.2795,
+    "tile_size_deg": 0.5,
+    "importance": "high"
+  },
+  {
+    "name": "Cristiano Ronaldo's House",
+    "type": "celebrity_home",
+    "lat": 32.6655,
+    "lng": -16.9241,
+    "tile_size_deg": 0.2,
+    "importance": "high"
+  },
+  {
+    "name": "Steve Jobs Garage",
+    "type": "tech",
+    "lat": 37.3317,
+    "lng": -122.0307,
+    "tile_size_deg": 0.2,
+    "importance": "medium"
+  },
+  {
+    "name": "Statue of Liberty",
+    "type": "landmark",
+    "lat": 40.6892,
+    "lng": -74.0445,
+    "tile_size_deg": 0.2,
+    "importance": "high"
+  }
+]

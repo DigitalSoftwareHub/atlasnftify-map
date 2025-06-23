@@ -33,7 +33,7 @@ premiumAreas.forEach(area => {
     }
   }
 });
-fetch('./vip_tile_locations.json')
+fetch('/vip_tile_locations.json') 
   .then(response => {
     if (!response.ok) throw new Error("VIP JSON konnte nicht geladen werden.");
     return response.json();

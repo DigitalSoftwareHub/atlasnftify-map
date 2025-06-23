@@ -39,4 +39,31 @@ premiumAreas.forEach(area => {
       L.rectangle(bounds, { color: "gold", weight: 1, fillOpacity: 0.2 }).addTo(map);
     }
   }
+  
 });
+// VIP-Kacheln laden
+fetch('vip_tile_locations.json')
+  .then(response => response.json())
+  .then(vipLocations => {
+    vipLocations.forEach(loc => {
+      const bounds = [
+        [loc.lat, loc.lng],
+        [loc.lat + loc.tile_size_deg, loc.lng + loc.tile_size_deg]
+      ];
+
+      const color = loc.importance === "high" ? "gold" : "orange";
+
+      L.rectangle(bounds, {
+        color: color,
+        weight: 1,
+        fillOpacity: 0.3
+      })
+      .addTo(map)
+      .bindPopup(`
+        <strong>${loc.name}</strong><br>
+        Type: ${loc.type}<br>
+        Size: ${loc.tile_size_deg}°<br>
+        Importance: ${loc.importance}
+      `);
+    });
+  });
